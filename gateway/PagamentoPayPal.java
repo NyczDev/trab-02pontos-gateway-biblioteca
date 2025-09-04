@@ -14,6 +14,8 @@ public class PagamentoPayPal implements Pagamento {
     public String processarPagamento(double valor) {
         if (validarContaPayPal()) {
             return "Pagamento de R$ " + String.format("%.2f", valor) + " com PayPal processado para a conta " + this.email + ".";
+        } else {
+            return "Erro: Conta PayPal inválida.";
         }
     }
 }

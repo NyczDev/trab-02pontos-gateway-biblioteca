@@ -1,8 +1,8 @@
-public class PagamentoCredito implements Pagamento {
+public class PagamentoCartaoCredito implements Pagamento {
 
     private String numCartao;
 
-    public PagamentoCredito(String numCartao) {
+    public PagamentoCartaoCredito(String numCartao) {
         this.numCartao = numCartao;
     }
 
@@ -17,7 +17,9 @@ public class PagamentoCredito implements Pagamento {
     @Override
     public String processarPagamento(double valor) {
         if (validarCartao()) {
-            return "Pagamento de R$ " + String.format("%.2f", valor) + " com cartão de crédito foi realizzado";
+            return "Pagamento de R$ " + String.format("%.2f", valor) + " com cartão de crédito foi realizado";
+        } else {
+            return "Erro: Número de cartão inválido.";
         }
     }
 }

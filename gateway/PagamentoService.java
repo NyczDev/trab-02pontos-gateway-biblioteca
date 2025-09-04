@@ -1,6 +1,6 @@
 public class PagamentoService {
 
-    public String processar(PagamentoFactory factory, double valor) {
+    public String processarPagamento(PagamentoFactory factory, double valor) {
         Pagamento metodoPagamento = factory.criarPagamento();
         return metodoPagamento.processarPagamento(valor);
     }

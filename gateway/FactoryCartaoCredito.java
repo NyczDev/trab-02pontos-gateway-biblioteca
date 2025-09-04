@@ -8,6 +8,6 @@ public class FactoryCartaoCredito extends PagamentoFactory {
 
     @Override
     public Pagamento criarPagamento() {
-        return new PagamentoCredito(this.numCartao);
+        return new PagamentoCartaoCredito(this.numCartao);
     }
 }
